@@ -1,3 +1,5 @@
+
+
 # Credit-Card-Fraud-Detection
 Credit Card Fraud Detection Model Implemented using Machine Learning In Python
 
@@ -32,5 +34,14 @@ X = new_dataset.drop(columns='Class', axis=1)
 Y = new_dataset['Class']
 print(Y)
 
+# accuracy on training data
+X_train_prediction = model.predict(X_train)
+training_data_accuracy = accuracy_score(X_train_prediction, Y_train)
+
+# accuracy on test data
+X_test_prediction = model.predict(X_test)
+test_data_accuracy = accuracy_score(X_test_prediction, Y_test)
+
+print('Accuracy score on Test Data : ', test_data_accuracy)
 
 
